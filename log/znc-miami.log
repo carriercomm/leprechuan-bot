@@ -1,0 +1,12 @@
+[2014/02/06 09:38:08.789] II [miami] Connecting to mia1.bnc.im:6697
+[2014/02/06 09:38:10.088] II [miami] Using SSL with mia1.bnc.im:6697
+[2014/02/06 09:38:11.425] !! [miami] Lost connection.
+[2014/02/06 09:38:11.426] II [miami] Waiting 2 seconds before reconnecting
+[2014/02/06 09:38:13.428] II [miami] Connecting to mia1.bnc.im:6697
+[2014/02/06 09:38:13.684] II [miami] Using SSL with mia1.bnc.im:6697
+[2014/02/06 09:38:15.029] !! [miami] Lost connection.
+[2014/02/06 09:38:15.044] II [miami] Waiting 4 seconds before reconnecting
+[2014/02/06 09:38:19.045] II [miami] Connecting to mia1.bnc.im:6697
+[2014/02/06 09:38:19.303] II [miami] Using SSL with mia1.bnc.im:6697
+[2014/02/06 09:38:19.757] !! [miami] Lost connection.
+[2014/02/06 09:38:19.760] II [miami] Waiting 8 seconds before reconnecting

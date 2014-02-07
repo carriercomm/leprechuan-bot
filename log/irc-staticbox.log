@@ -1,0 +1,12 @@
+[2014/02/06 09:38:08.795] II [staticbox] Connecting to irc.staticbox.net:6697
+[2014/02/06 09:38:14.116] II [staticbox] Using SSL with irc.staticbox.net:6697
+[2014/02/06 09:45:11.695] II [staticbox] Connecting to irc.staticbox.net:6697
+[2014/02/06 09:45:16.874] II [staticbox] Using SSL with irc.staticbox.net:6697
+[2014/02/06 09:52:02.375] II [staticbox] Connecting to irc.staticbox.net:6697
+[2014/02/06 09:52:07.715] II [staticbox] Using SSL with irc.staticbox.net:6697
+[2014/02/06 09:52:14.783] II [staticbox] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/06 09:52:16.094] II [staticbox] [SASL] SASL authentication with DH-BLOWFISH failed
+[2014/02/06 09:52:16.094] II [staticbox] [SASL] Trying to authenticate with PLAIN
+[2014/02/06 09:52:18.094] II [staticbox] [SASL] SASL authentication with PLAIN failed
+[2014/02/06 09:52:19.093] II [staticbox] Detected IRCd: charybdis
+[2014/02/06 09:52:19.094] II [staticbox] Detected network: staticbox

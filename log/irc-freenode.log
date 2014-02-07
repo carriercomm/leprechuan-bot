@@ -1,0 +1,80 @@
+[2014/02/06 09:54:08.261] II [freenode] Connecting to chat.freenode.net:6667
+[2014/02/06 09:54:08.642] II [freenode] Using SSL with chat.freenode.net:6667
+[2014/02/06 09:55:12.010] II [freenode] Connecting to irc.freenode.net:6697
+[2014/02/06 09:55:12.410] II [freenode] Using SSL with irc.freenode.net:6697
+[2014/02/06 09:55:13.998] II [freenode] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/06 09:55:14.409] II [freenode] [SASL] SASL authentication with DH-BLOWFISH failed
+[2014/02/06 09:55:14.409] II [freenode] [SASL] Trying to authenticate with PLAIN
+[2014/02/06 09:55:15.224] II [freenode] [SASL] SASL authentication with PLAIN successful
+[2014/02/06 09:55:15.740] II [freenode] Detected IRCd: ircd-seven
+[2014/02/06 09:55:15.742] II [freenode] Detected network: freenode
+[2014/02/06 09:57:52.466] II [freenode] Connecting to chat.freenode.net:6697
+[2014/02/06 09:57:52.830] II [freenode] Using SSL with chat.freenode.net:6697
+[2014/02/06 09:57:54.625] II [freenode] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/06 09:57:55.017] II [freenode] [SASL] SASL authentication with DH-BLOWFISH failed
+[2014/02/06 09:57:55.017] II [freenode] [SASL] Trying to authenticate with PLAIN
+[2014/02/06 09:57:55.829] II [freenode] [SASL] SASL authentication with PLAIN successful
+[2014/02/06 09:57:56.145] II [freenode] Detected IRCd: ircd-seven
+[2014/02/06 09:57:56.147] II [freenode] Detected network: freenode
+[2014/02/06 09:58:44.655] II [freenode] Connecting to chat.freenode.net:6697
+[2014/02/06 09:58:45.006] II [freenode] Using SSL with chat.freenode.net:6697
+[2014/02/06 09:58:46.793] II [freenode] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/06 09:58:47.167] II [freenode] [SASL] SASL authentication with DH-BLOWFISH failed
+[2014/02/06 09:58:47.168] II [freenode] [SASL] Trying to authenticate with PLAIN
+[2014/02/06 09:58:48.663] II [freenode] [SASL] SASL authentication with PLAIN successful
+[2014/02/06 09:58:49.145] II [freenode] Detected IRCd: ircd-seven
+[2014/02/06 09:58:49.147] II [freenode] Detected network: freenode
+[2014/02/06 10:01:28.502] II [freenode] Connecting to chat.freenode.net:6697
+[2014/02/06 10:01:28.901] II [freenode] Using SSL with chat.freenode.net:6697
+[2014/02/06 10:01:30.689] II [freenode] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/06 10:01:31.025] II [freenode] [SASL] SASL authentication with DH-BLOWFISH failed
+[2014/02/06 10:01:31.025] II [freenode] [SASL] Trying to authenticate with PLAIN
+[2014/02/06 10:01:31.786] II [freenode] [SASL] SASL authentication with PLAIN successful
+[2014/02/06 10:01:32.133] II [freenode] Detected IRCd: ircd-seven
+[2014/02/06 10:01:32.135] II [freenode] Detected network: freenode
+[2014/02/06 10:05:58.647] !! [freenode] /usr/lib/ruby/1.9.1/net/smtp.rb:540:in `initialize': execution expired (Timeout::Error)
+[2014/02/06 10:05:58.647] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:540:in `open'
+[2014/02/06 10:05:58.648] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:540:in `tcp_socket'
+[2014/02/06 10:05:58.648] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:549:in `block in do_start'
+[2014/02/06 10:05:58.648] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:549:in `do_start'
+[2014/02/06 10:05:58.648] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:519:in `start'
+[2014/02/06 10:05:58.648] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:457:in `start'
+[2014/02/06 10:05:58.648] !! [freenode] 	/home/ese/leprechuan.net/leprechuan-bot/bncim-bot/lib/mail.rb:17:in `send'
+[2014/02/06 10:05:58.648] !! [freenode] 	/home/ese/leprechuan.net/leprechuan-bot/bncim-bot/lib/mail.rb:49:in `send_verify'
+[2014/02/06 10:05:58.648] !! [freenode] 	/home/ese/leprechuan.net/leprechuan-bot/bncim-bot/lib/requests.rb:191:in `request'
+[2014/02/06 10:05:58.648] !! [freenode] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/plugin.rb:382:in `call'
+[2014/02/06 10:05:58.648] !! [freenode] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/plugin.rb:382:in `block (2 levels) in __register_matchers'
+[2014/02/06 10:05:58.648] !! [freenode] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/handler.rb:88:in `call'
+[2014/02/06 10:05:58.648] !! [freenode] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/handler.rb:88:in `block in call'
+[2014/02/06 10:28:40.966] II [freenode] Connecting to chat.freenode.net:6697
+[2014/02/06 10:28:41.352] II [freenode] Using SSL with chat.freenode.net:6697
+[2014/02/06 10:28:42.845] II [freenode] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/06 10:28:43.231] II [freenode] [SASL] SASL authentication with DH-BLOWFISH failed
+[2014/02/06 10:28:43.231] II [freenode] [SASL] Trying to authenticate with PLAIN
+[2014/02/06 10:28:44.013] II [freenode] [SASL] SASL authentication with PLAIN successful
+[2014/02/06 10:28:44.731] II [freenode] Detected IRCd: ircd-seven
+[2014/02/06 10:28:44.734] II [freenode] Detected network: freenode
+[2014/02/06 10:31:36.787] II [freenode] Connecting to chat.freenode.net:6697
+[2014/02/06 10:31:37.146] II [freenode] Using SSL with chat.freenode.net:6697
+[2014/02/06 10:31:38.920] II [freenode] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/06 10:31:39.289] II [freenode] [SASL] SASL authentication with DH-BLOWFISH failed
+[2014/02/06 10:31:39.290] II [freenode] [SASL] Trying to authenticate with PLAIN
+[2014/02/06 10:31:40.231] II [freenode] [SASL] SASL authentication with PLAIN successful
+[2014/02/06 10:31:41.127] II [freenode] Detected IRCd: ircd-seven
+[2014/02/06 10:31:41.129] II [freenode] Detected network: freenode
+[2014/02/06 10:33:44.551] !! [freenode] /usr/lib/ruby/1.9.1/net/smtp.rb:540:in `initialize': Connection refused - connect(2) (Errno::ECONNREFUSED)
+[2014/02/06 10:33:44.551] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:540:in `open'
+[2014/02/06 10:33:44.551] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:540:in `tcp_socket'
+[2014/02/06 10:33:44.551] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:549:in `block in do_start'
+[2014/02/06 10:33:44.551] !! [freenode] 	/usr/lib/ruby/1.9.1/timeout.rb:68:in `timeout'
+[2014/02/06 10:33:44.552] !! [freenode] 	/usr/lib/ruby/1.9.1/timeout.rb:99:in `timeout'
+[2014/02/06 10:33:44.552] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:549:in `do_start'
+[2014/02/06 10:33:44.552] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:519:in `start'
+[2014/02/06 10:33:44.552] !! [freenode] 	/usr/lib/ruby/1.9.1/net/smtp.rb:457:in `start'
+[2014/02/06 10:33:44.552] !! [freenode] 	/home/ese/leprechuan.net/leprechuan-bot/bncim-bot/lib/mail.rb:17:in `send'
+[2014/02/06 10:33:44.552] !! [freenode] 	/home/ese/leprechuan.net/leprechuan-bot/bncim-bot/lib/mail.rb:49:in `send_verify'
+[2014/02/06 10:33:44.552] !! [freenode] 	/home/ese/leprechuan.net/leprechuan-bot/bncim-bot/lib/requests.rb:191:in `request'
+[2014/02/06 10:33:44.552] !! [freenode] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/plugin.rb:382:in `call'
+[2014/02/06 10:33:44.552] !! [freenode] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/plugin.rb:382:in `block (2 levels) in __register_matchers'
+[2014/02/06 10:33:44.552] !! [freenode] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/handler.rb:88:in `call'
+[2014/02/06 10:33:44.552] !! [freenode] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/handler.rb:88:in `block in call'

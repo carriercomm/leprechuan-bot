@@ -1,0 +1,58 @@
+bot:
+  nick: leprechuan
+  user: leprechuan-bnc
+  realname: leprechuan.net administration bot [#leprechuan]
+  saslname: leprechuan
+  saslpass: jaquerleprechuan
+  channels:
+    - leprechuan
+    - leprechuan-bots
+    - leprechuan-ops
+zncservers:
+  newyork:
+    addr: leprechuan.net
+    port: 5000
+    ssl: false
+    username: leprechuan
+    password: jaquerleprechuan
+    public:
+      panel: http://leprechuan.net/
+      port: 5000
+      sslport: 
+ips:
+  newyork:
+    ipv4:
+      - 162.243.250.57
+    ipv6:
+      - 2001:470:1f07:b77::2
+      - 2001:470:1f07:b77::3
+servers:
+  freenode:
+    server: chat.freenode.net
+    port: 6697
+    nick: leprechuan
+    ssl: true
+    password: jaquerleprechuan
+#  staticbox:
+#    server: irc.staticbox.net
+#    port: 6697
+3    nick: bncim
+#    ssl: true
+#    password: example
+#  alphachat:
+#    server: irc.alphachat.net
+#    port: 6697
+#    nick: bncim
+#    ssl: true
+#    password: example
+admin:
+  network: newyork
+  channel: leprechuan-ops
+mail:
+  server:
+  port: 25
+  user: 
+  pass: 
+requestdb: ./data/request-db
+notifymail:
+  - admin@leprechuan.net

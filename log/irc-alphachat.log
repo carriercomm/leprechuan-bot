@@ -1,0 +1,26 @@
+[2014/02/06 09:38:08.810] II [alphachat] Connecting to irc.alphachat.net:6697
+[2014/02/06 09:38:14.070] II [alphachat] Using SSL with irc.alphachat.net:6697
+[2014/02/06 09:38:15.303] II [alphachat] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/06 09:38:15.487] !! [alphachat] /var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/sasl/dh_blowfish.rb:42:in `dup': can't dup NilClass (TypeError)
+[2014/02/06 09:38:15.487] !! [alphachat] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/sasl/dh_blowfish.rb:42:in `generate'
+[2014/02/06 09:38:15.487] !! [alphachat] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/irc.rb:894:in `on_authenticate'
+[2014/02/06 09:38:15.487] !! [alphachat] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/irc.rb:263:in `parse'
+[2014/02/06 09:38:15.487] !! [alphachat] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/irc.rb:151:in `block (2 levels) in start_reading_thread'
+[2014/02/06 09:38:15.487] !! [alphachat] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/helpers.rb:122:in `rescue_exception'
+[2014/02/06 09:38:15.487] !! [alphachat] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/irc.rb:149:in `block in start_reading_thread'
+[2014/02/06 09:45:11.696] II [alphachat] Connecting to irc.alphachat.net:6697
+[2014/02/06 09:45:12.128] II [alphachat] Using SSL with irc.alphachat.net:6697
+[2014/02/06 09:45:14.177] II [alphachat] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/06 09:45:15.232] II [alphachat] [SASL] SASL authentication with DH-BLOWFISH failed
+[2014/02/06 09:45:15.232] II [alphachat] [SASL] Trying to authenticate with PLAIN
+[2014/02/06 09:45:16.529] II [alphachat] [SASL] SASL authentication with PLAIN failed
+[2014/02/06 09:45:17.342] II [alphachat] Detected IRCd: charybdis
+[2014/02/06 09:45:17.356] II [alphachat] Detected network: alphachat
+[2014/02/06 09:52:02.392] II [alphachat] Connecting to irc.alphachat.net:6697
+[2014/02/06 09:52:02.859] II [alphachat] Using SSL with irc.alphachat.net:6697
+[2014/02/06 09:52:04.957] II [alphachat] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/06 09:52:06.025] II [alphachat] [SASL] SASL authentication with DH-BLOWFISH failed
+[2014/02/06 09:52:06.025] II [alphachat] [SASL] Trying to authenticate with PLAIN
+[2014/02/06 09:52:07.092] II [alphachat] [SASL] SASL authentication with PLAIN failed
+[2014/02/06 09:52:07.438] II [alphachat] Detected IRCd: charybdis
+[2014/02/06 09:52:07.440] II [alphachat] Detected network: alphachat
