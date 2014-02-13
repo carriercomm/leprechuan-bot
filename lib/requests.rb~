@@ -177,7 +177,7 @@ class RequestPlugin
     
     unless reqserver.nil?
       unless $config["zncservers"].keys.include? reqserver.downcase
-        m.reply "Error: #{reqserver} is not a valid bnc.im server. " + \
+        m.reply "Error: #{reqserver} is not a valid leprechuan.net server. " + \
                 "Please pick from: #{$config["zncservers"].keys.join(", ")}"
         return
       end
@@ -225,7 +225,7 @@ class RequestPlugin
   end
   
   def topic(m, topic)
-    return unless m.channel == "#bnc.im-admin"
+    return unless m.channel == "#leprechuan-ops"
     command = "TOPIC"
     if topic.split(" ")[0] == "--append"
       command = "TOPICAPPEND"
@@ -235,15 +235,15 @@ class RequestPlugin
       topic = topic.split(" ")[1..-1].join(" ")
     end
     $bots.each_value do |bot|
-      bot.irc.send("PRIVMSG ChanServ :#{command} #bnc.im #{topic}")
+      bot.irc.send("PRIVMSG ChanServ :#{command} #leprechuan #{topic}")
     end
     m.reply "done!"
   end
   
   def broadcast(m, text)
-    return unless m.channel == "#bnc.im-admin"
+    return unless m.channel == "#leprechuan-ops"
     $bots.each_value do |bot|
-      bot.irc.send("PRIVMSG #bnc.im :#{Format(:bold, "[BROADCAST]")} #{text}")
+      bot.irc.send("PRIVMSG #leprechuan :#{Format(:bold, "[BROADCAST]")} #{text}")
     end
     
     $zncs.each_value do |zncbot|
@@ -253,7 +253,7 @@ class RequestPlugin
   end
   
   def approve(m, id, ip)
-    return unless m.channel == "#bnc.im-admin"
+    return unless m.channel == "#leprechuan-ops"
     unless RequestDB.requests.has_key?(id.to_i)
       m.reply "Error: request ##{id} not found."
       return
@@ -322,7 +322,7 @@ class RequestPlugin
   end
   
   def servers(m)
-    if m.channel == "#bnc.im-admin"
+    if m.channel == "#leprechuan-ops"
       ips = $config["ips"]
       ips.each do |name, addrs|
         ipv4 = addrs["ipv4"]
@@ -337,7 +337,7 @@ class RequestPlugin
   end
   
   def fverify(m, id)
-    return unless m.channel == "#bnc.im-admin"
+    return unless m.channel == "#leprechuan-ops"
     unless RequestDB.requests.has_key?(id.to_i)
       m.reply "Error: request ##{id} not found."
       return
@@ -358,7 +358,7 @@ class RequestPlugin
   end
   
   def reqinfo(m, id)
-    return unless m.channel == "#bnc.im-admin"
+    return unless m.channel == "#leprechuan-ops"
     unless RequestDB.requests.has_key?(id.to_i)
       m.reply "Error: request ##{id} not found."
       return
@@ -375,7 +375,7 @@ class RequestPlugin
   end
   
   def delete(m, id)
-    return unless m.channel == "#bnc.im-admin"
+    return unless m.channel == "#leprechuan-ops"
     unless RequestDB.requests.has_key?(id.to_i)
       m.reply "Error: request ##{id} not found."
       return
@@ -387,12 +387,12 @@ class RequestPlugin
 
   def allmsg(m)
     $bots.each do |network, bot|
-      bot.irc.send("PRIVMSG #bnc.im :#{m}")
+      bot.irc.send("PRIVMSG #leprechuan :#{m}")
     end
   end
   
   def pending(m)
-    return unless m.channel == "#bnc.im-admin"
+    return unless m.channel == "#leprechuan-ops"
     
     pending = Array.new
     RequestDB.requests.each_value do |r|
@@ -412,26 +412,26 @@ class RequestPlugin
   end
   
   def help(m)
-    if m.channel == "#bnc.im-admin"
+    if m.channel == "#leprechuan-ops"
       m.reply "Admin commands:"
       m.reply "!pending | !reqinfo <id> | !delete <id> | !fverify <id> | !servers | !approve <id> <ip>"
       return
     end
-    m.reply "#{Format(:bold, "Syntax: !request <user> <email> <server> [+]<port> [bnc.im server]")}. Parameters in brackets are not required. A + before the port denotes SSL. This command can be issued in a private message."
-    m.reply "For example, a user called bncim-lover with an email of ilovebncs@mail.com who wants a bouncer for Interlinked on our chicago server would issue: " + \
-             Format(:bold, "!request bncim-lover ilovebncs@mail.com irc.interlinked.me 6667 chicago")
+    m.reply "#{Format(:bold, "Syntax: !request <user> <email> <server> [+]<port> [leprechuan.net server]")}. Parameters in brackets are not required. A + before the port denotes SSL. This command can be issued in a private message."
+    m.reply "For example, a user called foo with an email of foo@bar.tdl who wants a bouncer for Interlinked on our newyork server would issue: " + \
+             Format(:bold, "!request foo foo@bar.tdl irc.freenode.net 6667 newyork")
   end
 
   def web(m)
-    m.reply "http://bnc.im"
+    m.reply "http://leprechuan.net"
   end
 
   def setup(m)
-    m.reply "http://bnc.im/setup.html"
+    m.reply "http://leprechuan.net/setup.html"
   end
 
   def adminmsg(text)
-    $adminbot.irc.send("PRIVMSG #bnc.im-admin :#{text}")
+    $adminbot.irc.send("PRIVMSG #leprechuan-ops :#{text}")
   end
   
   def format_status(r)

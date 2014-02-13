@@ -17,7 +17,7 @@ class Mail
     Net::SMTP.start(conf["server"], conf["port"], 'leprechuan.net', conf["user"], \
                     conf["pass"], :plain) do |smtp|
       smtp.enable_starttls
-      smtp.send_message message, 'no-reply@leprechuan.net',
+      smtp.send_message message, 'admin@leprechuan.net',
         to_addr
     end
   end
@@ -25,21 +25,27 @@ class Mail
   def self.send_verify(to_addr, id, code)
     
     msgstr = <<-END_OF_MESSAGE
-      From: leprechuan.net bot <no-reply@leprechuan.net>
+      From: leprechuan.net bot <admin@leprechuan.net>
       To: #{to_addr}
       Reply-to: admin@leprechuan.net
       Subject: leprechuan.net account verification
       Date: #{Time.now.ctime}
       Message-Id: <#{UUID.generate}@leprechuan.net>
 
-      Someone, hopefully you, requested an account in the http://leprechuan.net IRC channel. If this was you, please send
+      Someone, hopefully you, requested an account in the 
+      http://leprechuan.net IRC channel. 
+
+      If this was you, please send
 
       !verify #{id} #{code} 
 
-      in n a private message to the bot. If you need any help, please visit http://leprechuan.net/webchat.html
+      in the #leprechuan channel or in a private message to the bot. 
+      If you need any help, please visit:
+      http://leprechuan.net/webchat.html
 
       Regards,
       leprechuan.net team
+
 			http://leprechuan.net/
     END_OF_MESSAGE
     
@@ -51,7 +57,7 @@ class Mail
 
   def self.request_waiting(to_addr, r)
     msgstr = <<-END_OF_MESSAGE
-      From: leprechuan.net bot <no-reply@leprechuan.net>
+      From: leprechuan.net bot <admin@leprechuan.net>
       To: #{to_addr}
       Reply-to: admin@leprechuan.net
       Subject: leprechuan.net account request - ##{r.id} for #{r.username}
@@ -84,7 +90,7 @@ class Mail
     sslport = $config["zncservers"][server]["public"]["sslport"]
     
     msgstr = <<-END_OF_MESSAGE
-      From: leprechuan.net bot <no-reply@leprechuan.net>
+      From: leprechuan.net bot <admin@leprechuan.net>
       To: #{to_addr}
       Reply-to: admin@leprechuan.net
       Subject: leprechuan.net account approved
@@ -111,12 +117,29 @@ class Mail
       
       #{user}:#{pass}
       
+      Example (Using XCHAT, open a new server tab and type): 
+      /server leprechuan.net 5000 #{user}:#{pass}
+      
+      If you need a ssh account, please request a account in our channel, you must
+      explain the use you will have to your account, standard account includes:
+
+      SSH access
+      Email Adress (ipv4 and ipv6)
+      irssi, eggdrop, mutt, webserver, php, mysql
+      quota 10mb
+      10 process max.
+      mosh
+      bind hosts
+      
+      if you need any special need, please requested at the irc channel.
+
       If you need any help, please do not hestitate to join our IRC 
-      channel: irc.interlinked.me #leprechuan.net - or connect to our webchat
+      channel: irc.freenode.net #leprechuan - or connect to our webchat
       at https://leprechuan.net/webchat.html.
       
       Regards,
       leprechuan.net team
+
 			http://leprechuan.net/
     END_OF_MESSAGE
     

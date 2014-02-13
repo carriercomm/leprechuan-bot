@@ -78,3 +78,15 @@
 [2014/02/06 10:33:44.552] !! [freenode] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/plugin.rb:382:in `block (2 levels) in __register_matchers'
 [2014/02/06 10:33:44.552] !! [freenode] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/handler.rb:88:in `call'
 [2014/02/06 10:33:44.552] !! [freenode] 	/var/lib/gems/1.9.1/gems/cinch-2.0.12/lib/cinch/handler.rb:88:in `block in call'
+[2014/02/13 09:19:11.263] II [freenode] Connecting to chat.freenode.net:6697
+[2014/02/13 09:19:11.618] II [freenode] Using SSL with chat.freenode.net:6697
+[2014/02/13 09:19:13.275] II [freenode] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/13 09:19:14.015] II [freenode] [SASL] SASL authentication with DH-BLOWFISH successful
+[2014/02/13 09:19:14.281] II [freenode] Detected IRCd: ircd-seven
+[2014/02/13 09:19:14.283] II [freenode] Detected network: freenode
+[2014/02/13 09:22:56.397] II [freenode] Connecting to chat.freenode.net:6697
+[2014/02/13 09:22:56.718] II [freenode] Using SSL with chat.freenode.net:6697
+[2014/02/13 09:22:58.361] II [freenode] [SASL] Trying to authenticate with DH-BLOWFISH
+[2014/02/13 09:22:59.071] II [freenode] [SASL] SASL authentication with DH-BLOWFISH successful
+[2014/02/13 09:22:59.335] II [freenode] Detected IRCd: ircd-seven
+[2014/02/13 09:22:59.337] II [freenode] Detected network: freenode

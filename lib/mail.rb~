@@ -1,5 +1,5 @@
 ####
-### bnc.im administration bot
+### leprechuan.net administration bot
 ### mail lib
 ###
 ### Copyright (c) 2013 Andrew Northall
@@ -14,10 +14,10 @@ require 'uuid'
 class Mail
   def self.send(to_addr, message)
     conf = $config["mail"]
-    Net::SMTP.start(conf["server"], conf["port"], 'bnc.im', conf["user"], \
+    Net::SMTP.start(conf["server"], conf["port"], 'leprechuan.net', conf["user"], \
                     conf["pass"], :plain) do |smtp|
       smtp.enable_starttls
-      smtp.send_message message, 'no-reply@bnc.im',
+      smtp.send_message message, 'no-reply@leprechuan.net',
         to_addr
     end
   end
@@ -25,22 +25,22 @@ class Mail
   def self.send_verify(to_addr, id, code)
     
     msgstr = <<-END_OF_MESSAGE
-      From: bnc.im bot <no-reply@bnc.im>
+      From: leprechuan.net bot <no-reply@leprechuan.net>
       To: #{to_addr}
-      Reply-to: admin@bnc.im
-      Subject: bnc.im account verification
+      Reply-to: admin@leprechuan.net
+      Subject: leprechuan.net account verification
       Date: #{Time.now.ctime}
-      Message-Id: <#{UUID.generate}@bnc.im>
+      Message-Id: <#{UUID.generate}@leprechuan.net>
 
-      Someone, hopefully you, requested an account in the http://bnc.im IRC channel. If this was you, please send
+      Someone, hopefully you, requested an account in the http://leprechuan.net IRC channel. If this was you, please send
 
       !verify #{id} #{code} 
 
-      in either #bnc.im or in a private message to the bot. If you need any help, please visit http://bnc.im/webchat.html.
+      in n a private message to the bot. If you need any help, please visit http://leprechuan.net/webchat.html
 
       Regards,
-      bnc.im team
-			http://bnc.im/
+      leprechuan.net team
+			http://leprechuan.net/
     END_OF_MESSAGE
     
     # remove whitespace from above
@@ -51,14 +51,14 @@ class Mail
 
   def self.request_waiting(to_addr, r)
     msgstr = <<-END_OF_MESSAGE
-      From: bnc.im bot <no-reply@bnc.im>
+      From: leprechuan.net bot <no-reply@leprechuan.net>
       To: #{to_addr}
-      Reply-to: admin@bnc.im
-      Subject: bnc.im account request - ##{r.id} for #{r.username}
+      Reply-to: admin@leprechuan.net
+      Subject: leprechuan.net account request - ##{r.id} for #{r.username}
       Date: #{Time.now.ctime}
-      Message-Id: <#{UUID.generate}@bnc.im>
+      Message-Id: <#{UUID.generate}@leprechuan.net>
 
-      There is a bnc.im account waiting to be approved. Details:
+      There is a leprechuan.net account waiting to be approved. Details:
 
       ID: #{r.id}
       Username: #{r.username}
@@ -69,7 +69,7 @@ class Mail
       Requested server: #{r.reqserver || "not specified"}
 
       Regards,
-      bnc.im bot
+      leprechuan.net bot
     END_OF_MESSAGE
 
     msg = msgstr.lines.map { |l| l.strip }.join("\r\n")
@@ -84,16 +84,16 @@ class Mail
     sslport = $config["zncservers"][server]["public"]["sslport"]
     
     msgstr = <<-END_OF_MESSAGE
-      From: bnc.im bot <no-reply@bnc.im>
+      From: leprechuan.net bot <no-reply@leprechuan.net>
       To: #{to_addr}
-      Reply-to: admin@bnc.im
-      Subject: bnc.im account approved
+      Reply-to: admin@leprechuan.net
+      Subject: leprechuan.net account approved
       Date: #{Time.now.ctime}
-      Message-Id: <#{UUID.generate}@bnc.im>
+      Message-Id: <#{UUID.generate}@leprechuan.net>
       
       Dear #{user},
       
-      Your bnc.im account has been approved. Your account details are:
+      Your leprechuan.net account has been approved. Your account details are:
       
       Server: #{addr}
       Server name: #{server}
@@ -105,19 +105,19 @@ class Mail
       
       In order to connect to your new account, you will need to connect
       your IRC client to #{addr} on port #{port} (or #{sslport} for SSL) 
-      and configure your client to send your bnc.im username and password 
+      and configure your client to send your leprechuan.net username and password 
       together in the server password field, seperated by a colon,
       like so: 
       
       #{user}:#{pass}
       
       If you need any help, please do not hestitate to join our IRC 
-      channel: irc.interlinked.me #bnc.im - or connect to our webchat
-      at https://bnc.im/webchat.html.
+      channel: irc.interlinked.me #leprechuan.net - or connect to our webchat
+      at https://leprechuan.net/webchat.html.
       
       Regards,
-      bnc.im team
-			http://bnc.im/
+      leprechuan.net team
+			http://leprechuan.net/
     END_OF_MESSAGE
     
     # remove whitespace from above

@@ -1,7 +1,6 @@
 bncim-bot
 =========
-
-bnc.im public bnc service administration bot. Intended for private use only, but open sourced. 
+leprechuan-bot public bnc service administration bot. Intended for private use only, but open sourced. 
 
 License
 =======

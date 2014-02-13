@@ -216,7 +216,7 @@ class RequestPlugin
     r = RequestDB.requests[r.id]
 
     m.reply "Request confirmed! Your request is now pending administrative approval. " + \
-      "You will receive an email with further details when it is approved. Thanks for using bnc.im."
+      "You will receive an email with further details when it is approved. Thanks for using leprechuan.net"
 
     $config["notifymail"].each do |email|
       Mail.request_waiting(email, r)
